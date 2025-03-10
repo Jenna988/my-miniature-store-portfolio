@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <header class="border-top border-5 border-primary shadow-sm">
+      <!-- 導覽 -->
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand text-primary" href="./index.html"
+            >MINIATURE</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./02-about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./03-product-list.html"
+                  >Product</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./05-store.html"
+                  >Store</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./06-faqs.html">Q&A</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./07-contact.html"
+                  >Contact</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Enterprise</a
+                >
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">What's New</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Financial Reports</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <!-- 搜尋欄 -->
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-primary" type="submit">
+                Search
+              </button>
+            </form>
+
+            <!-- 購物車 & 帳號 -->
+            <div class="d-flex">
+              <button
+                class="btn btn-link text-black p-0 me-2"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                <i class="bi bi-cart3 fs-2 ms-2 text-primary"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-link text-black p-0"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="bi bi-person-circle fs-2 ms-2 text-primary"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-shrink-0">
+      <div class="container">
+        <h1 class="text-center my-4">Checkout</h1>
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Your product</h3>
+            <div id="cart-items" class="list-group">
+              <!-- 商品列表將動態生成 -->
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Cart</h5>
+                <p class="card-text">
+                  Quantity: <span id="cart-quantity">0</span>
+                </p>
+                <p class="card-text">
+                  Subtotal: NT$<span id="cart-total">0</span>
+                </p>
+                <a href="#" class="btn btn-primary text-white">Go to pay</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto bg-primary text-center py-5 text-white">
+      <p>
+        This site is protected by Jenna Web and the Google Privacy Policy and
+        Terms of Service apply.
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // 删除商品
+      function deleteItem(name) {
+        delete mergedCart[name];
+        mergedCartArray = Object.values(mergedCart); // 更新全局變量
+        updateCart();
+      }
+      // 從 localStorage 中獲取購物車數據
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // 合併相同名稱的商品
+      const mergedCart = cart.reduce((acc, item) => {
+        if (acc[item.name]) {
+          acc[item.name].quantity += item.quantity;
+        } else {
+          acc[item.name] = { ...item };
+        }
+        return acc;
+      }, {});
+
+      // 將合併後的商品轉換為數組
+      let mergedCartArray = Object.values(mergedCart);
+
+      // 動態生成購物車商品列表
+      const cartItemsDiv = document.getElementById("cart-items");
+      const cartQuantitySpan = document.getElementById("cart-quantity");
+      const cartTotalSpan = document.getElementById("cart-total");
+
+      let totalQuantity = mergedCartArray.reduce(
+        (sum, item) => sum + item.quantity,
+        0
+      );
+      let totalPrice = mergedCartArray.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+      );
+
+      function renderCart() {
+        cartItemsDiv.innerHTML = mergedCartArray
+          .map(
+            (item, index) => `
+        <div class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <div>
+              <p>${item.name}</p>
+              <p>單價: NT$${item.price}</p>
+              <div class="input-group w-50">
+                <button type="button" class="btn btn-outline-secondary" onclick="decreaseQuantity('${
+                  item.name
+                }')">-</button>
+                <input type="text" class="form-control text-center" value="${
+                  item.quantity
+                }" readonly>
+                <button type="button" class="btn btn-outline-secondary" onclick="increaseQuantity('${
+                  item.name
+                }')">+</button>
+              </div>
+            </div>
+            <p class="fw-bold">小計: NT$<span class="subtotal-${index}">${
+              item.price * item.quantity.toFixed(2)
+            }</span></p>
+          </div>
+        </div>
+      `
+          )
+          .join("");
+
+        cartQuantitySpan.textContent = totalQuantity;
+        cartTotalSpan.textContent = totalPrice.toFixed(2);
+
+        // 更新每個小計
+        mergedCartArray.forEach((item, index) => {
+          const subtotalSpan = document.querySelector(`.subtotal-${index}`);
+          if (subtotalSpan) {
+            subtotalSpan.textContent = item.price * item.quantity.toFixed(2);
+          }
+        });
+      }
+
+      renderCart();
+
+      // 增加數量
+      function increaseQuantity(name) {
+        const item = mergedCart[name];
+        item.quantity++;
+        updateCart();
+      }
+
+      // 減少數量
+      function decreaseQuantity(name) {
+        const item = mergedCart[name];
+        if (item.quantity > 1) {
+          item.quantity--;
+        } else {
+          if (confirm("數量已為1，確定要刪除該商品嗎？")) {
+            deleteItem(name);
+          }
+        }
+        updateCart();
+      }
+
+      // 更新購物車數據和顯示
+      function updateCart() {
+        // 重新計算總數量和總價格
+        totalQuantity = mergedCartArray.reduce(
+          (sum, item) => sum + item.quantity,
+          0
+        );
+        totalPrice = mergedCartArray.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0
+        );
+        // 渲染購物車
+        renderCart();
+
+        // 更新localStorage
+        const newCart = [];
+        mergedCartArray.forEach((item) => {
+          for (let i = 0; i < item.quantity; i++) {
+            newCart.push({ name: item.name, price: item.price, quantity: 1 });
+          }
+        });
+        localStorage.setItem("cart", JSON.stringify(newCart));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product03</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <header class="border-top border-5 border-primary shadow-sm">
+      <!-- 導覽 -->
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand text-primary" href="./index.html"
+            >MINIATURE</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./02-about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./03-product-list.html"
+                  >Product</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./05-store.html"
+                  >Store</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./06-faqs.html">Q&A</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="./07-contact.html"
+                  >Contact</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Enterprise</a
+                >
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">What's New</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Financial Reports</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <!-- 搜尋欄 -->
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-primary" type="submit">
+                Search
+              </button>
+            </form>
+
+            <!-- 購物車 & 帳號 -->
+            <div class="d-flex">
+              <button
+                class="btn btn-link text-black p-0 me-2"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                <i class="bi bi-cart3 fs-2 ms-2 text-primary"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-link text-black p-0"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="bi bi-person-circle fs-2 ms-2 text-primary"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 麵包屑 -->
+    <nav aria-label="breadcrumb" class="m-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+        <li class="breadcrumb-item">
+          <a href="./03-product-list.html">Product</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">product03</li>
+      </ol>
+    </nav>
+
+    <!-- 內文 -->
+    <main class="flex-shrink-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-5">
+            <img
+              src="./img/product-03.jpg"
+              class="img-fluid d-block mb-2"
+              alt=""
+            />
+            <img
+              src="./img/product-03.jpg"
+              class="img-thumbnail"
+              alt=""
+              width="60"
+            />
+            <img
+              src="./img/product-03.jpg"
+              class="img-thumbnail"
+              alt=""
+              width="60"
+            />
+            <img
+              src="./img/product-03.jpg"
+              class="img-thumbnail"
+              alt=""
+              width="60"
+            />
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <h3 class="fw-bold">product03</h3>
+            <p class="text-secondary">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+              Eius facere saepe, vero quae aut debitis.<br />
+              Ducimus, voluptatibus architecto!<br />
+            </p>
+            <p>Quibusdam fugiat itaque minima!</p>
+            <p class="text-danger fs-3 fw-bold">NT$1500</p>
+            <p>Pid:P003</p>
+            <p>Stock: 100pcs</p>
+
+            <form action="">
+              <div
+                class="btn-group mb-3 w-100"
+                role="group"
+                aria-label="Basic outlined example"
+              >
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  id="decreaseButton"
+                >
+                  一
+                </button>
+                <input
+                  type="text"
+                  class="form-control text-center rounded-0"
+                  value="1"
+                  id="quantityInput"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  id="increaseButton"
+                >
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+              </div>
+              <div class="row">
+                <div class="col-6 d-grid">
+                  <input
+                    type="text"
+                    class="btn btn-outline-primary mb-3 fw-bold"
+                    name=""
+                    id="add-to-cart-button"
+                    value="Add to cart"
+                  />
+                </div>
+                <div class="col-6 d-grid">
+                  <button
+                    type="button"
+                    class="btn btn-primary mb-3 fw-bold text-white"
+                    onclick="window.location.href='./09-checkout.html';"
+                  >
+                    Buy now
+                  </button>
+                </div>
+              </div>
+              <button class="btn btn-outline-secondary rounded-pill mb-5">
+                <i class="bi bi-heart me-1"></i>Favorite
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto bg-primary text-center py-5 text-white">
+      <p>
+        This site is protected by Jenna Web and the Google Privacy Policy and
+        Terms of Service apply.
+      </p>
+    </footer>
+
+    <!-- 添加隱藏輸入框來存儲商品名稱和價格 -->
+    <input type="hidden" id="productName" value="product03" />
+    <input type="hidden" id="productPrice" value="1500" />
+
+    <!-- 互動視窗：商品已加入購物車 -->
+    <div
+      class="modal fade"
+      id="productAddedModal"
+      tabindex="-1"
+      aria-labelledby="productAddedModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productAddedModalLabel">Infomation</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-primary">
+              <i class="fa-regular fa-circle-check text-primary"></i> Added to
+              cart!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary text-white"
+              data-bs-dismiss="modal"
+            >
+              OK
+            </button>
+            <button type="button" class="btn btn-secondary" id="goToCartButton">
+              Go to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 互動視窗 -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Welcome Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              action=""
+              id="LoginForm"
+              autocomplete="off"
+              class="needs-validation"
+              novalidate
+            >
+              <div class="form-group mb-2">
+                <label for="account">Account</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="account"
+                  id="account"
+                  placeholder="Please type your Email"
+                  required
+                />
+                <div class="invalid-feedback">Please type your Email</div>
+              </div>
+
+              <div class="form-group mb-2">
+                <label for="password">Password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Please type your password"
+                  required
+                />
+                <div class="invalid-feedback">Please type your password</div>
+              </div>
+
+              <p class="text-end">
+                <a href="">forget password?</a>
+              </p>
+
+              <div class="d-grid">
+                <input
+                  class="btn btn-primary text-white"
+                  type="submit"
+                  value="Login"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 左側選單 -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">My Cart</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <p class="fs-3 text-primary">Cart is empty😢</p>
+          <p>Quantity:</p>
+          <a href="./09-checkout.html" class="btn btn-primary text-white"
+            >Continue to checkout</a
+          >
+        </div>
+      </div>
+    </div>
+
+        <!-- 確認刪除模態框 -->
+        <div
+        class="modal fade"
+        id="confirmDeleteModal"
+        tabindex="-1"
+        aria-labelledby="confirmDeleteModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="confirmDeleteModalLabel">
+                Confirm Deletion
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to remove this item from the cart?
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="confirmDeleteButton"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+    <!-- 右下top鍵 -->
+    <a
+      href=""
+      class="position-fixed bottom-0 end-0 m-3 p-3 text-decoration-none text-white bg-warning rounded-circle"
+      >TOP</a
+    >
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/validation.js"></script>
+
+    <script>
+      // 初始化購物車數組
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // 獲取數量輸入框和加減按鈕元素
+      const quantityInput = document.getElementById("quantityInput");
+      const decreaseButton = document.getElementById("decreaseButton");
+      const increaseButton = document.getElementById("increaseButton");
+
+      // 減少數量
+      function decreaseQuantity() {
+        let quantity = parseInt(quantityInput.value);
+        if (quantity > 1) {
+          quantity--;
+          quantityInput.value = quantity;
+        }
+      }
+
+      // 增加數量
+      function increaseQuantity() {
+        let quantity = parseInt(quantityInput.value);
+        quantity++;
+        quantityInput.value = quantity;
+      }
+
+      // 為加減按鈕添加點擊事件監聽器
+      decreaseButton.addEventListener("click", decreaseQuantity);
+      increaseButton.addEventListener("click", increaseQuantity);
+
+      function addToCart() {
+        // 獲取商品信息，從隱藏輸入框中獲取商品名稱和價格
+        const productName = document.getElementById("productName").value;
+        const productPrice = parseInt(
+          document.getElementById("productPrice").value
+        );
+        const product = {
+          name: productName,
+          price: productPrice,
+          quantity: parseInt(quantityInput.value), // 獲取用戶選擇的數量
+        };
+
+        // 檢查購物車中是否已有相同名稱的商品
+        const existingProductIndex = cart.findIndex(
+          (item) => item.name === product.name
+        );
+        if (existingProductIndex !== -1) {
+          // 如果已有相同名稱的商品，合並數量
+          cart[existingProductIndex].quantity += product.quantity;
+        } else {
+          // 否則，將商品添加到購物車數組
+          cart.push(product);
+        }
+
+        // 更新 localStorage 中的購物車數據
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // 更新購物車顯示
+        updateCartDisplay();
+      }
+
+      function updateCartDisplay() {
+        const cartOffcanvas = document.getElementById("offcanvasExample");
+        const cartBody = cartOffcanvas.querySelector(".offcanvas-body");
+
+        if (cart.length === 0) {
+          // 購物車為空時的顯示
+          cartBody.innerHTML = `
+            <div>
+              <p class="fs-3 text-primary">Cart is empty😢</p>
+              <p>Quantity: 0</p>
+              <a href="./09-checkout.html" class="btn btn-primary text-white">Continue to checkout</a>
+            </div>
+          `;
+        } else {
+          // 合併相同名稱的商品
+          const mergedCart = {};
+          cart.forEach((item) => {
+            if (mergedCart[item.name]) {
+              mergedCart[item.name].quantity += item.quantity;
+            } else {
+              mergedCart[item.name] = {
+                name: item.name,
+                price: item.price,
+                quantity: item.quantity,
+              };
+            }
+          });
+
+          let totalQuantity = 0;
+          let cartItemsHtml = "";
+
+          for (const productName in mergedCart) {
+            const item = mergedCart[productName];
+            totalQuantity += item.quantity;
+            cartItemsHtml += `
+        <div class="mb-2">
+          <p>
+            ${item.name} - 
+            <button type="button" class="btn btn-outline-secondary" onclick="decreaseCartItemQuantity('${productName}')">-</button>
+            Quantity: ${item.quantity} 
+            <button type="button" class="btn btn-outline-secondary" onclick="increaseCartItemQuantity('${productName}')">+</button>
+            - Price: NT$${item.price}
+          </p>
+        </div>
+      `;
+          }
+
+          cartBody.innerHTML = `
+      <div>
+        <p class="fs-3 text-primary">My Cart</p>
+        <p>Quantity: ${totalQuantity}</p>
+        ${cartItemsHtml}
+        <a href="./09-checkout.html" class="btn btn-primary text-white">Continue to checkout</a>
+      </div>
+    `;
+        }
+      }
+
+      // 減少購物車中特定商品數量
+      function decreaseCartItemQuantity(productName) {
+        const index = cart.findIndex((item) => item.name === productName);
+        console.log("Index found:", index); // 查看找到的索引
+        if (index !== -1) {
+          console.log("Cart item before change:", cart[index]); // 查看修改前的商品信息
+          if (cart[index].quantity > 1) {
+            cart[index].quantity--;
+          } else {
+            const confirmDelete = confirm(
+              "Are you sure you want to remove this item from the cart?"
+            );
+            if (confirmDelete) {
+              cart.splice(index, 1);
+            } else {
+              return;
+            }
+          }
+          console.log("Cart after change:", cart); // 查看修改後的購物車
+          localStorage.setItem("cart", JSON.stringify(cart));
+          updateCartDisplay();
+        } else {
+          console.log("Product not found in cart");
+        }
+      }
+
+      // 增加購物車中特定商品數量
+      function increaseCartItemQuantity(productName) {
+        const index = cart.findIndex((item) => item.name === productName);
+        if (index !== -1) {
+          cart[index].quantity++;
+          // 更新localStorage中的購物車數據
+          localStorage.setItem("cart", JSON.stringify(cart));
+          // 更新購物車顯示
+          updateCartDisplay();
+        }
+      }
+
+      // 頁面加載完成後執行
+      document.addEventListener("DOMContentLoaded", function () {
+        const addToCartButton = document.getElementById("add-to-cart-button");
+        const productAddedModal = new bootstrap.Modal(
+          document.getElementById("productAddedModal")
+        );
+        const goToCartButton = document.getElementById("goToCartButton");
+        const cartOffcanvas = new bootstrap.Offcanvas(
+          document.getElementById("offcanvasExample")
+        );
+
+        addToCartButton.addEventListener("click", function (event) {
+          event.preventDefault();
+          addToCart();
+          // 顯示商品已加入購物車模態框
+          productAddedModal.show();
+        });
+
+        goToCartButton.addEventListener("click", function () {
+          // 隱藏商品已加入購物車模態框
+          productAddedModal.hide();
+          // 顯示購物車側邊欄
+          cartOffcanvas.show();
+        });
+
+        // 頁面加載時更新購物車顯示
+        updateCartDisplay();
+      });
+    </script>
+  </body>
+</html>
